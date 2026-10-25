@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen text-gray-800">
+
+  <div class="max-w-3xl mx-auto px-4 py-8">
+
+    <h1 class="text-2xl font-bold mb-6">Weather App</h1>
+
+    <form class="flex gap-2 mb-6" id="searchCity">
+      <input id="cityName" type="text"
+        placeholder="Enter city name.."
+        class="w-full border border-gray-300 rounded-md px-3 py-2 outline-none focus:border-blue-500"
+      />
+      <button id="btn" type="submit"
+        class="bg-blue-600 text-white px-5 py-2 rounded-md hover:bg-blue-700">
+        Search
+      </button>
+    </form>
+
+    <section class="bg-white border border-gray-200 rounded-lg p-5 mb-6">
+      <p class="text-gray-500 text-sm">Current Weather</p>
+      <h2 id="weatherCity" class="text-xl font-semibold mt-1">Delhi</h2>
+
+      <div class="flex items-center gap-5 mt-4">
+        <p id="temperature" class="text-5xl font-semibold"></p>
+        <div>
+          <p id="description" class="text-gray-700">Clouds</p>
+          <p id="feelsLike" class="text-sm text-gray-500"></p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 border-t mt-5 pt-4">
+        <div>
+          <p class="text-sm text-gray-500">Humidity</p>
+          <p id="humidity" class="font-medium"></p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-500">Wind</p>
+          <p id="wind" class="font-medium"></p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-500">Pressure</p>
+          <p id="pressure" class="font-medium"></p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-500">Visibility</p>
+          <p id="visibility" class="font-medium"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white border border-gray-200 rounded-lg p-5">
+      <h2 class="text-lg font-semibold mb-4">5-Day Forecast</h2>
+      <div id="forecast" class="divide-y"></div>
+    </section>
+
+    <p class="text-center text-sm text-gray-500 mt-5">
+      Weather data powered by OpenWeatherMap
+    </p>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
