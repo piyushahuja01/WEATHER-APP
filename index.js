@@ -3,7 +3,7 @@ const cityName = document.querySelector("#cityName");
 const searchCity = document.querySelector("#searchCity");
 const btn = document.querySelector("#btn");
 
-const API_KEY = "8875f59985620e2c424c4875c5c465b3";
+const API_KEY = "a89c5dbe8c0a0ad3961820115d9e3da4";
 
 async function fetchWeather(city = "delhi") {
     try {
